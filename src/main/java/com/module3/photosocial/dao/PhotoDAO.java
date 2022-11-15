@@ -22,6 +22,8 @@ public class PhotoDAO extends DatabaseContext implements IPhotoDAO{
     private static final String LIST_PHOTO_USER_UPLOAD = "SELECT idPhoto, urlPhoto, photoName, timeCreatePhoto, iduser, view " +
             "FROM photo JOIN user on  photo.iduser = user.userId where user.userId = ?;";
 
+
+
     private Photo getPhotoFromResultSet(ResultSet rs) throws SQLException {
         int idPhoto = rs.getInt("idPhoto");
         String urlPhoto = rs.getString("urlPhoto");
